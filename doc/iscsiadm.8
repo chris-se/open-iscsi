@@ -228,7 +228,7 @@ display help text and exit
 
 .TP
 \fB\-H\fR, \fB\-\-host=\fI[hostno|MAC]\fR
-The host agrument specifies the SCSI host to use for the operation. It can be
+The host argument specifies the SCSI host to use for the operation. It can be
 the scsi host number assigned to the host by the kernel's scsi layer, or the
 MAC address of a scsi host.
 
@@ -251,10 +251,10 @@ layer's interface name (iface.net_ifacename), and it must have the
 driver/transport_name
 
 The available drivers/iscsi_transports are tcp (software iSCSI over TCP/IP),
-iser (software iSCSI over infinniband), or qla4xxx (Qlogic 4XXXX HBAs). The
+iser (software iSCSI over InfiniBand), or qla4xxx (Qlogic 4XXXX HBAs). The
 hwaddress is the MAC address or for software iSCSI it may be the special
 value "default" which directs the initiator to not bind the session to a
-specific hardware resource and instead allow the network or infinniband layer
+specific hardware resource and instead allow the network or InfiniBand layer
 to decide what to do. There is no need to create a iface config with the default
 behavior. If you do not specify a iface, then the default behavior is used.
 
@@ -268,7 +268,7 @@ In discovery mode multiple interfaces can be specified by passing in multiple
 "iscsiadm \-m discoverydb \-t st \-p ip:port \-I iface0 \-I iface2 \-\-discover"
 
 Will direct iscsiadm to setup the node db to create records which will create
-sessions though the two intefaces passed in.
+sessions though the two interfaces passed in.
 
 In node mode, only a single interface is supported in each call to iscsiadm.
 .IP
@@ -303,7 +303,7 @@ This option is only valid for discovery and node modes.
 .TP
 \fB\-L\fR, \fB\-\-loginall==\fI[all|manual|automatic]\fR
 For node mode, login all sessions with the node or conn startup values passed
-in or all running sesssion, except ones marked onboot, if all is passed in.
+in or all running session, except ones marked onboot, if all is passed in.
 .IP
 This option is only valid for node mode (it is valid but not functional
 for session mode).
@@ -352,7 +352,7 @@ In discovery mode, if the \fIrecid\fR and new operation is passed in, but the \f
 .IP
 \fIupdate\fR will update the \fIrecid\fR with \fIname\fR to the specified \fIvalue\fR. In discovery node, if iscsiadm is performing discovery the \fIrecid\fR, \fIname\fR  and \fIvalue\fR arguments are not needed. The update operation will operate on the portals returned by the target, and will update the node records with info from the config file and command line.
 .IP
-\fIshow\fR is the default behaviour for node, discovery and iface mode. It is
+\fIshow\fR is the default behavior for node, discovery and iface mode. It is
 also used when there are no commands passed into session mode and a running
 sid is passed in.
 \fIname\fR and \fIvalue\fR are currently ignored when used with \fIshow\fR.
@@ -445,7 +445,7 @@ This option is only valid for node and session mode.
 .TP
 \fB\-U\fR, \fB\-\-logoutall==\fI[all,manual,automatic]\fR
 logout all sessions with the node or conn startup values passed in or all
-running sesssion, except ones marked onboot, if all is passed in.
+running session, except ones marked onboot, if all is passed in.
 .IP
 This option is only valid for node mode (it is valid but not functional
 for session mode).
@@ -568,7 +568,7 @@ ISCSI_ERR_INVAL - invalid argument.
 .TP
 .B
 8
-ISCSI_ERR_TRANS_TIMEOUT - connection timer exired while trying to connect.
+ISCSI_ERR_TRANS_TIMEOUT - connection timer expired while trying to connect.
 
 .TP
 .B
@@ -583,7 +583,7 @@ ISCSI_ERR_LOGOUT - iSCSI logout failed.
 .TP
 .B
 11
-ISCSI_ERR_PDU_TIMEOUT - iSCSI PDU timedout.
+ISCSI_ERR_PDU_TIMEOUT - iSCSI PDU timed out.
 
 .TP
 .B
